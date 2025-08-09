@@ -1,33 +1,32 @@
-🎯 Tic-Tac-Toe Web App
-📌 Overview
-This is a modern Tic-Tac-Toe game built with HTML, CSS, and JavaScript.
-It features Player vs Player and Player vs AI modes, a clean and engaging design, and responsive layout for all devices.
+🎮 Tic-Tac-Toe Web Application
+Task 01 - Prodigy Infotech Internship
+This project is an advanced Tic-Tac-Toe Web Application developed using HTML, CSS, and JavaScript as part of my internship at Prodigy Infotech.
+It features interactive gameplay, modern UI design, and options to play against another player or an AI opponent.
+
+🛠 Technologies Used
+HTML (Structure)
+
+CSS (Styling & Animations)
+
+JavaScript (Game Logic & Interactivity)
 
 🚀 Features
-Two Game Modes:
+Two modes: Player vs Player and Player vs AI
 
-👫 Player vs Player
+Tracks game state and announces winner/draw in real time
 
-🤖 Player vs AI (Random AI)
+Modern, animated game board design
 
-Clean & Modern UI
+Fully responsive for mobile and desktop
 
-Winning Highlights (animated highlight for the winning combination)
+Smooth hover and click effects for better UX
 
-Restart Button to start a new match instantly
+Restart button to start fresh anytime
 
-Fully Responsive for mobile and desktop devices
-
-🛠️ Technologies Used
-HTML5 – For structuring the game
-
-CSS3 – For styling, animations, and responsive design
-
-JavaScript (ES6) – For game mechanics and interactions
-
-📂 File Structure
-tic-tac-toe/
-│── index.html   # HTML structure
-│── style.css    # Styling and animations
-│── script.js    # Game logic
-│── README.md    # Project documentation
+📂 Project Structure
+TicTacToe/
+│
+├── index.html     # Structure of the game
+├── style.css      # Styling and animations
+├── script.js      # Game logic & functionality
+└── README.md      # Project documentation
