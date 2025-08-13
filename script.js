@@ -1,7 +1,3 @@
-/* -------------------------
-   Tic-Tac-Toe with Analysis
-   ------------------------- */
-
 const cells = document.querySelectorAll('.cell');
 const statusText = document.getElementById('status');
 const restartBtn = document.getElementById('restart');
@@ -29,9 +25,6 @@ const winningConditions = [
   [0,4,8],[2,4,6]
 ];
 
-/* -------------------------
-   Initialize charts (Chart.js)
-   ------------------------- */
 let probChart, scoreChart;
 function initCharts(){
   const probCtx = document.getElementById('probChart').getContext('2d');
@@ -70,9 +63,6 @@ function initCharts(){
   });
 }
 
-/* -------------------------
-   Mode & Game control
-   ------------------------- */
 pvpBtn.addEventListener('click', () => startGame(false));
 aiBtn.addEventListener('click', () => startGame(true));
 restartBtn.addEventListener('click', () => resetMatch());
@@ -108,9 +98,6 @@ function resetMatch(){
   startNextRound();
 }
 
-/* -------------------------
-   Click handler & game logic
-   ------------------------- */
 function handleCellClick(e){
   const index = Number(e.target.dataset.index);
   if(!gameActive || board[index] !== "") return;
@@ -199,9 +186,6 @@ function endRound(winner){
   scoreChart.update();
 }
 
-/* -------------------------
-   Move history & UI updates
-   ------------------------- */
 function updateMoveHistory(){
   moveHistoryEl.innerHTML = '';
   moves.forEach((m, i) => {
@@ -211,16 +195,12 @@ function updateMoveHistory(){
   });
 }
 
-/* map 0-8 to coordinates A1..C3 */
 function indexToCoord(i){
   const cols = ['A','B','C'];
   const row = Math.floor(i/3)+1;
   return `${cols[i%3]}${row}`;
 }
 
-/* -------------------------
-   Analysis & Strategy Tips
-   ------------------------- */
 function updateAnalysis(){
   // update probability chart
   const scoreForO = minimax(board.slice(), 'O').score; // -10,0,10
@@ -320,9 +300,6 @@ function findForkOpportunity(player){
   return null;
 }
 
-/* -------------------------
-   Minimax (unbeatable AI)
-   ------------------------- */
 function minimax(newBoard, player){
   // Check for terminal states
   if(checkWinState(newBoard, 'X')) return {score:-10};
